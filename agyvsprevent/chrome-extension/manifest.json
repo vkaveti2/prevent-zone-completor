@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Prevent Zone Training Automator Pro",
+  "version": "2.0",
+  "description": "Automate 16x speed playback, auto-next navigation, and quiz completion for Prevent Zone training modules.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.prevent.zone/*",
+    "file:///*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Prevent Zone Automator"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.prevent.zone/*",
+        "file:///*preventzone*",
+        "file:///*loadSCO*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_end"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Zone Training Automator Pro Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-icon">⚡</div>
+      <div>
+        <div class="brand-title">Prevent Zone Automator Pro</div>
+        <div class="brand-subtitle">Volleyball Team Training Automation Hub</div>
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="overview">Overview & Download</button>
+      <button class="tab-btn" data-tab="methods">Automation Methods</button>
+      <button class="tab-btn" data-tab="simulator">Live Training Simulator</button>
+      <button class="tab-btn" data-tab="guide">Setup Guide</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Automate Prevent Zone Volleyball Modules</h1>
+        <p>
+          Complete trainings with <strong>16x fast playback speed</strong>, automated <strong>smart quiz answering</strong>, and continuous <strong>auto-next slide advancing</strong> across all Articulate Storyline player frames and Moodle course activities.
+        </p>
+        <div class="badge-row">
+          <div class="badge active">✓ 16x Speed Override</div>
+          <div class="badge active">✓ Auto-Inject Speed Menu Item</div>
+          <div class="badge active">✓ Smart Quiz Selector</div>
+          <div class="badge active">✓ Auto Next Observer</div>
+          <div class="badge">✓ Cross-Frame iFrame Support</div>
+        </div>
+      </div>
+
+      <div class="quick-card">
+        <h3>🚀 Quick Start</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 16px;">
+          Choose your preferred method below to automate your training modules instantly.
+        </p>
+        <button class="action-btn btn-primary" id="copy-userscript-btn">
+          📋 Copy Userscript Code
+        </button>
+        <button class="action-btn btn-secondary" id="copy-console-btn">
+          💻 Copy DevTools Console Code
+        </button>
+      </div>
+    </section>
+
+    <!-- Tab 1: Overview & Download -->
+    <div class="view-panel active" id="tab-overview">
+      <div class="grid-3">
+
+        <!-- Card 1: Userscript -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🐵 Tampermonkey Userscript</div>
+            <span class="badge active">Recommended</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;">
+            Full automation suite with glassmorphic floating control widget. Works automatically inside every training iframe and player.
+          </p>
+          <div class="code-box" id="code-preview-userjs">
+// Loading userscript preview...
+          </div>
+          <button class="action-btn btn-primary" data-copy="userjs">
+            Copy preventzone-automation.user.js
+          </button>
+        </div>
+
+        <!-- Card 2: Chrome Extension -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🧩 Chrome / Edge Extension</div>
+            <span class="badge">Standalone</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;">
+            Installable unpacked extension for Chrome and Edge. Runs with background content script and popup toolbar.
+          </p>
+          <div class="code-box">
+File location in workspace:
+chrome-extension/
+  ├── manifest.json
+  ├── content.js
+  ├── popup.html
+  ├── popup.js
+  └── styles.css
+          </div>
+          <button class="action-btn btn-secondary" id="copy-ext-guide">
+            View Extension Setup Steps
+          </button>
+        </div>
+
+        <!-- Card 3: Console Bookmarklet -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">⚡ DevTools Console Script</div>
+            <span class="badge">Zero Install</span>
+          </div>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-bottom: 14px;">
+            Copy and paste into F12 Console or save as a Browser Bookmarklet for instant 16x speed and quiz completion on any machine.
+          </p>
+          <div class="code-box" id="code-preview-console">
+// Loading console snippet...
+          </div>
+          <button class="action-btn btn-secondary" data-copy="console">
+            Copy DevTools Script
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Tab 2: Automation Methods -->
+    <div class="view-panel" id="tab-methods">
+      <div class="card" style="margin-bottom: 24px;">
+        <h2 style="margin-bottom: 16px;">How the Automation Works</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+          <div>
+            <h4 style="color: #60a5fa; margin-bottom: 8px;">1. 16x Speed Injection</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+              Dynamically creates a <code style="color:#38bdf8">&lt;div class="cs-listitem menu-choice" data-speed="16"&gt;</code> element inside Articulate Storyline's playback speed dropdown. Sets media <code style="color:#38bdf8">playbackRate = 16</code> and triggers internal <code style="color:#38bdf8">DS.appState.setPlaybackSpeed(16)</code> loop.
+            </p>
+          </div>
+          <div>
+            <h4 style="color: #34d399; margin-bottom: 8px;">2. Smart Quiz Selector</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+              Solves quiz questions in both Moodle quizes (<code style="color:#38bdf8">.que</code>) and Storyline embedded slides. Filters out hidden dummy inputs (<code style="color:#38bdf8">value="-1"</code>), checks valid options, and dispatches <code style="color:#38bdf8">change</code>, <code style="color:#38bdf8">input</code>, and <code style="color:#38bdf8">click</code> DOM events.
+            </p>
+          </div>
+          <div>
+            <h4 style="color: #f59e0b; margin-bottom: 8px;">3. Auto-Next Observer</h4>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+              Monitors disabled or hidden <code style="color:#38bdf8">#next</code> and <code style="color:#38bdf8">#submit</code> buttons across frames. Automatically unlocks disabled attributes when media completes and triggers clicks to advance to the next slide or section.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Live Training Simulator -->
+    <div class="view-panel" id="tab-simulator">
+      <div class="simulator-container">
+        <div class="sim-toolbar">
+          <div style="font-weight: 600; font-size: 14px;">🎮 Interactive Training Player Simulator</div>
+          <div class="sim-tabs">
+            <button class="sim-tab active" data-sim="loadsco">Storyline Player (loadSCO.html)</button>
+            <button class="sim-tab" data-sim="quiz">Moodle Quiz (5. Quiz.html)</button>
+          </div>
+        </div>
+        <iframe id="sim-frame" class="sim-viewport" src="3. The Impact on Athletics _ Hazing Prevention_ Athletics 2026-2027 _ Prevent Zone PSU_files/loadSCO.html"></iframe>
+      </div>
+    </div>
+
+    <!-- Tab 4: Setup Guide -->
+    <div class="view-panel" id="tab-guide">
+      <div class="card">
+        <h2 style="margin-bottom: 16px;">Installation & Setup Instructions</h2>
+        
+        <h3 style="color: #60a5fa; margin-top: 16px; margin-bottom: 8px;">Method 1: Tampermonkey Userscript (Recommended)</h3>
+        <ol style="margin-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          <li>Install the <strong>Tampermonkey</strong> extension in Chrome, Edge, or Firefox.</li>
+          <li>Click the Tampermonkey icon in your browser extension bar and select <strong>"Create a new script..."</strong>.</li>
+          <li>Delete the default template, click the <strong>Copy Userscript Code</strong> button above, and paste it.</li>
+          <li>Press <kbd>Ctrl + S</kbd> to save.</li>
+          <li>Open your Prevent Zone training page. The ⚡ floating control widget will appear in the bottom-right corner!</li>
+        </ol>
+
+        <h3 style="color: #34d399; margin-top: 24px; margin-bottom: 8px;">Method 2: Chrome / Edge Developer Extension</h3>
+        <ol style="margin-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          <li>Open Chrome or Edge and go to <code style="color:#38bdf8">chrome://extensions/</code> or <code style="color:#38bdf8">edge://extensions/</code>.</li>
+          <li>Enable <strong>"Developer mode"</strong> in the top right corner.</li>
+          <li>Click <strong>"Load unpacked"</strong>.</li>
+          <li>Select the <code style="color:#38bdf8">chrome-extension</code> folder inside this workspace (<code style="color:#38bdf8">C:\Users\kavet\Downloads\preventzone\chrome-extension</code>).</li>
+          <li>The extension icon will now appear in your browser toolbar!</li>
+        </ol>
+
+        <h3 style="color: #f59e0b; margin-top: 24px; margin-bottom: 8px;">Method 3: DevTools Console (Instant / No Install)</h3>
+        <ol style="margin-left: 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.8;">
+          <li>Open any Prevent Zone training page or player.</li>
+          <li>Press <kbd>F12</kbd> (or Right Click -> Inspect) and switch to the <strong>Console</strong> tab.</li>
+          <li>Click <strong>Copy DevTools Script</strong> above, paste it into the console, and hit <kbd>Enter</kbd>.</li>
+        </ol>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Code copied to clipboard!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
